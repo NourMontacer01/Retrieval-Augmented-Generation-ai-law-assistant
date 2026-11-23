@@ -1,0 +1,7 @@
+[
+  {
+    "question": "EXEMPLE DE FORMAT - a remplacer par tes propres questions",
+    "attendus": ["rgpd-article-35"],
+    "filtres": {"source_id": "rgpd"}
+  }
+]

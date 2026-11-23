@@ -1,0 +1,12 @@
+[
+  {
+    "id": "echantillon",
+    "titre": "Echantillon de test",
+    "url": "local",
+    "nature": "contraignant",
+    "autorite": "Union europeenne",
+    "juridiction": "UE",
+    "date": "2016-04-27",
+    "format": "txt"
+  }
+]

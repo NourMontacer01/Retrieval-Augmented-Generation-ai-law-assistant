@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Nour Montacer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recueil de conformité</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="bandeau">
+  <div class="filet-double"></div>
+  <div class="bandeau-ligne">
+    <span>Droit de l'Union européenne</span>
+    <span id="date-du-jour"></span>
+    <span>RGPD &middot; AI Act &middot; ePrivacy &middot; Data Act</span>
+  </div>
+  <h1>Recueil de conformité</h1>
+  <p class="chapeau">Interroger le texte des règlements et lire l'article exact, avec sa portée juridique.</p>
+  <p class="auteur">Réalisé par Nour Montacer &middot; Master Data &amp; IA &middot; ECE Paris</p>
+  <div class="filet-double"></div>
+</header>
+
+<main>
+  <form id="formulaire" class="saisie" autocomplete="off">
+    <label for="question" class="etiquette">Question</label>
+    <textarea id="question" rows="2" maxlength="1000"
+      placeholder="Dans quels cas une analyse d'impact relative à la protection des données est-elle requise ?"></textarea>
+
+    <div class="reglages">
+      <fieldset>
+        <legend>Texte</legend>
+        <label><input type="radio" name="source" value="" checked><span>tous</span></label>
+        <label><input type="radio" name="source" value="rgpd"><span>RGPD</span></label>
+        <label><input type="radio" name="source" value="ai-act"><span>AI Act</span></label>
+        <label><input type="radio" name="source" value="eprivacy"><span>ePrivacy</span></label>
+        <label><input type="radio" name="source" value="data-act"><span>Data Act</span></label>
+      </fieldset>
+      <fieldset>
+        <legend>Unité</legend>
+        <label><input type="radio" name="unite" value="" checked><span>toutes</span></label>
+        <label><input type="radio" name="unite" value="article"><span>articles</span></label>
+        <label><input type="radio" name="unite" value="considerant"><span>considérants</span></label>
+        <label><input type="radio" name="unite" value="annexe"><span>annexes</span></label>
+      </fieldset>
+      <button type="submit" id="bouton">Consulter</button>
+    </div>
+
+    <p class="exemples">Par exemple :
+      <a href="#" data-q="Quelles informations doivent être fournies à la personne concernée lors de la collecte de ses données ?">information des personnes</a>,
+      <a href="#" data-q="Quelles pratiques d'intelligence artificielle sont interdites ?">pratiques interdites</a>,
+      <a href="#" data-q="Dans quel délai notifier une violation de données à l'autorité de contrôle ?">violation de données</a>,
+      <a href="#" data-q="Quelles obligations de transparence pour les fournisseurs de modèles d'IA à usage général ?">modèles à usage général</a>.
+    </p>
+  </form>
+
+  <p id="statut" class="statut" hidden></p>
+
+  <section id="resultats" hidden>
+    <article class="synthese">
+      <h2>Synthèse <span id="fournisseur" class="discret"></span></h2>
+      <div id="texte-synthese"></div>
+    </article>
+
+    <section class="sources">
+      <h2>Passages retenus <span id="duree" class="discret"></span></h2>
+      <p class="legende"><mark>Surligné</mark> : dans chaque passage, la phrase la plus proche de la question.</p>
+      <ol id="liste-sources"></ol>
+    </section>
+  </section>
+</main>
+
+<aside id="lecteur" class="lecteur" aria-hidden="true">
+  <div class="lecteur-page">
+    <button type="button" id="fermer" class="fermer" aria-label="Fermer">Fermer</button>
+    <p id="lecteur-source" class="lecteur-source"></p>
+    <p id="lecteur-chapitre" class="lecteur-chapitre"></p>
+    <h3 id="lecteur-titre"></h3>
+    <p id="lecteur-sous-titre" class="lecteur-sous-titre"></p>
+    <div id="lecteur-texte" class="lecteur-texte"></div>
+    <p class="lecteur-pied"><span id="lecteur-version"></span> &middot; <a id="lecteur-lien" target="_blank" rel="noopener">texte sur EUR-Lex</a></p>
+  </div>
+</aside>
+
+<footer class="pied">
+  <div class="filet-double"></div>
+  <p>Cet outil oriente dans les textes&nbsp;; il ne qualifie rien juridiquement. Il ne dit pas si un système est à haut risque&nbsp;: il montre les articles qui le définissent.</p>
+  <p class="discret">Sources&nbsp;: Journal officiel de l'Union européenne, via EUR-Lex.</p>
+  <p class="discret signature">Nour Montacer &mdash; projet personnel, module Gen IA &mdash; Master Data &amp; IA, ECE Paris</p>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+/* Mise en page inspiree des recueils juridiques imprimes :
+   papier, encre, filets, petites capitales, numeros d'article en marge. */
+
+:root {
+  --papier: #f5f0e6;
+  --papier-fonce: #ece5d6;
+  --encre: #1f1b16;
+  --encre-douce: #5a5247;
+  --filet: #b9ad98;
+  --rouge: #8a1f1f;
+  --bleu: #22395c;
+  --vert: #3e5a3c;
+  --fluo: #f6e45c;
+  --mesure: 46rem;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }
+
+body {
+  margin: 0;
+  padding: 0 1rem;
+  background: var(--papier);
+  color: var(--encre);
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  line-height: 1.55;
+  font-feature-settings: "kern", "liga", "onum";
+}
+
+a { color: var(--rouge); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+.discret { color: var(--encre-douce); font-size: .85rem; font-weight: 400; }
+
+/* ---- Bandeau ---- */
+
+.bandeau, main, .pied { max-width: var(--mesure); margin: 0 auto; }
+
+.bandeau { padding-top: 2rem; text-align: center; }
+
+.filet-double {
+  border-top: 3px solid var(--encre);
+  border-bottom: 1px solid var(--encre);
+  height: 6px;
+}
+
+.bandeau-ligne {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .35rem 0;
+  font-variant: small-caps;
+  letter-spacing: .06em;
+  font-size: .82rem;
+  color: var(--encre-douce);
+  border-bottom: 1px solid var(--filet);
+}
+
+h1 {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: 3rem;
+  letter-spacing: .01em;
+  margin: 1.2rem 0 .2rem;
+}
+
+.chapeau {
+  font-style: italic;
+  color: var(--encre-douce);
+  margin: 0 0 1.2rem;
+}
+
+/* ---- Saisie ---- */
+
+.saisie { margin: 2.2rem 0 1rem; }
+
+.etiquette, legend, h2 {
+  font-variant: small-caps;
+  letter-spacing: .08em;
+  font-size: .9rem;
+  color: var(--encre-douce);
+  font-weight: 600;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: .3rem;
+  padding: .4rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--encre);
+  background: transparent;
+  color: var(--encre);
+  font: inherit;
+  font-size: 1.2rem;
+  resize: vertical;
+}
+textarea:focus { outline: none; border-bottom: 2px solid var(--rouge); }
+textarea::placeholder { color: #9a8f7e; font-style: italic; }
+
+.reglages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem 2rem;
+  margin-top: 1rem;
+}
+
+fieldset { border: 0; padding: 0; margin: 0; }
+legend { padding: 0; margin-bottom: .2rem; }
+
+fieldset label { margin-right: .7rem; cursor: pointer; }
+fieldset input { position: absolute; opacity: 0; }
+fieldset span { border-bottom: 1px solid transparent; }
+fieldset input:checked + span { border-bottom-color: var(--rouge); color: var(--rouge); }
+fieldset input:focus-visible + span { outline: 1px dotted var(--encre); }
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+#bouton {
+  margin-left: auto;
+  padding: .45rem 1.4rem;
+  background: var(--encre);
+  color: var(--papier);
+  border: 1px solid var(--encre);
+  font-variant: small-caps;
+  letter-spacing: .1em;
+}
+#bouton:hover { background: var(--rouge); border-color: var(--rouge); }
+#bouton:disabled { opacity: .5; cursor: wait; }
+
+.exemples { font-size: .9rem; color: var(--encre-douce); margin-top: 1.2rem; }
+
+.statut {
+  font-style: italic;
+  color: var(--encre-douce);
+  border-left: 2px solid var(--filet);
+  padding-left: .8rem;
+}
+
+/* ---- Resultats ---- */
+
+#resultats { margin: 2rem 0 3rem; }
+
+h2 {
+  border-bottom: 1px solid var(--filet);
+  padding-bottom: .2rem;
+  margin: 2rem 0 1rem;
+}
+
+.synthese #texte-synthese p { margin: 0 0 .8rem; text-align: justify; hyphens: auto; }
+
+.appel {
+  font-size: .72em;
+  vertical-align: super;
+  line-height: 0;
+  text-decoration: none;
+  padding: 0 .1em;
+}
+
+.sources ol { list-style: none; padding: 0; margin: 0; }
+
+.source {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0 1.2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--papier-fonce);
+}
+
+.marge {
+  text-align: right;
+  font-family: "EB Garamond", Georgia, serif;
+  line-height: 1.15;
+}
+.marge .rang { display: block; font-size: .8rem; color: var(--encre-douce); }
+.marge .numero { display: block; font-size: 1.5rem; }
+.marge .type { display: block; font-variant: small-caps; font-size: .85rem; color: var(--encre-douce); }
+
+.source-tete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .3rem .8rem;
+  margin-bottom: .3rem;
+}
+
+.source-ref { font-weight: 600; font-size: .95rem; }
+
+.nature {
+  font-variant: small-caps;
+  letter-spacing: .06em;
+  font-size: .78rem;
+  padding: 0 .4rem;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+.nature-contraignant { color: var(--rouge); }
+.nature-recommandation { color: var(--bleu); }
+.nature-ethique { color: var(--vert); }
+
+.extrait { margin: 0; color: var(--encre); font-size: .95rem; }
+.extrait p { margin: 0 0 .4rem; }
+
+/* Surligneur : la phrase la plus proche de la question */
+mark {
+  background: var(--fluo);
+  color: inherit;
+  padding: .05em .15em;
+  margin: 0 -.15em;
+  border-radius: .2em .4em .3em .25em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.legende { font-size: .82rem; color: var(--encre-douce); font-style: italic; margin: -.5rem 0 .5rem; }
+.legende mark { font-style: normal; }
+
+.source-pied { margin-top: .4rem; font-size: .82rem; color: var(--encre-douce); }
+.source-pied button {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--rouge);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.source:target { background: var(--papier-fonce); }
+
+/* ---- Lecteur d'article ---- */
+
+.lecteur {
+  position: fixed;
+  inset: 0;
+  background: rgba(31, 27, 22, .35);
+  display: none;
+  justify-content: flex-end;
+  z-index: 10;
+}
+.lecteur.ouvert { display: flex; }
+
+.lecteur-page {
+  width: min(40rem, 100%);
+  height: 100%;
+  overflow-y: auto;
+  background: var(--papier);
+  border-left: 3px double var(--encre);
+  padding: 2.5rem 2rem 3rem;
+}
+
+.fermer {
+  float: right;
+  background: none;
+  border: 1px solid var(--encre);
+  padding: .1rem .6rem;
+  font-variant: small-caps;
+  letter-spacing: .08em;
+}
+
+.lecteur-source, .lecteur-chapitre {
+  margin: 0;
+  font-variant: small-caps;
+  letter-spacing: .06em;
+  color: var(--encre-douce);
+  font-size: .85rem;
+}
+
+.lecteur-page h3 {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 1.5rem 0 0;
+}
+
+.lecteur-sous-titre { text-align: center; font-weight: 600; margin: .2rem 0 1.5rem; }
+
+.lecteur-texte p { margin: 0 0 .7rem; text-align: justify; hyphens: auto; }
+
+.lecteur-pied {
+  margin-top: 2rem;
+  padding-top: .5rem;
+  border-top: 1px solid var(--filet);
+  font-size: .82rem;
+  color: var(--encre-douce);
+}
+
+/* ---- Pied de page ---- */
+
+.pied { padding: 0 0 2rem; font-size: .88rem; }
+.pied p { margin: .8rem 0 0; }
+
+.auteur {
+  margin: -.4rem 0 1rem;
+  font-variant: small-caps;
+  letter-spacing: .06em;
+  color: var(--encre-douce);
+}
+.signature { font-style: italic; }
+
+/* ---- Petits ecrans ---- */
+
+@media (max-width: 600px) {
+  html { font-size: 16px; }
+  h1 { font-size: 2.2rem; }
+  .bandeau-ligne span:nth-child(2) { display: none; }
+  .source { grid-template-columns: 1fr; }
+  .marge { text-align: left; display: flex; gap: .6rem; align-items: baseline; }
+  .marge .numero { font-size: 1.2rem; }
+  #bouton { margin-left: 0; width: 100%; }
+  .lecteur-page { padding: 1.5rem 1rem 2rem; }
+}

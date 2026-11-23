@@ -1,0 +1,50 @@
+[
+  {
+    "id": "rgpd",
+    "titre": "Règlement (UE) 2016/679 — RGPD",
+    "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32016R0679",
+    "celex": "32016R0679",
+    "nature": "contraignant",
+    "autorite": "Union européenne",
+    "juridiction": "UE",
+    "date": "2016-04-27",
+    "format": "html",
+    "version": "Journal officiel du 4 mai 2016 (hors rectificatif du 23 mai 2018)"
+  },
+  {
+    "id": "ai-act",
+    "titre": "Règlement (UE) 2024/1689 — AI Act",
+    "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32024R1689",
+    "celex": "32024R1689",
+    "nature": "contraignant",
+    "autorite": "Union européenne",
+    "juridiction": "UE",
+    "date": "2024-06-13",
+    "format": "html",
+    "version": "Journal officiel du 12 juillet 2024"
+  },
+  {
+    "id": "eprivacy",
+    "titre": "Directive 2002/58/CE — ePrivacy",
+    "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:02002L0058-20091219",
+    "celex": "02002L0058-20091219",
+    "nature": "contraignant",
+    "autorite": "Union européenne",
+    "juridiction": "UE",
+    "date": "2002-07-12",
+    "format": "html",
+    "version": "Version consolidée du 19 décembre 2009 (inclut la règle sur les cookies, sans les considérants)"
+  },
+  {
+    "id": "data-act",
+    "titre": "Règlement (UE) 2023/2854 — Data Act",
+    "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32023R2854",
+    "celex": "32023R2854",
+    "nature": "contraignant",
+    "autorite": "Union européenne",
+    "juridiction": "UE",
+    "date": "2023-12-13",
+    "format": "html",
+    "version": "Journal officiel du 22 décembre 2023"
+  }
+]

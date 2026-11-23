@@ -1,0 +1,46 @@
+02016R0679 — FR — 04.05.2016 — 000.002
+
+►B
+RÈGLEMENT (UE) 2016/679 DU PARLEMENT EUROPÉEN ET DU CONSEIL
+du 27 avril 2016
+
+(5)
+L'intégration économique et sociale résultant du fonctionnement du marché intérieur a conduit à une augmentation substantielle des flux transfrontaliers.
+
+(6) L'évolution rapide des technologies et la mondialisation ont créé de nouveaux enjeux pour la protection des données.
+
+CHAPITRE I
+Dispositions générales
+
+Article premier
+Objet et objectifs
+1. Le présent règlement établit des règles relatives à la protection des personnes physiques.
+2. Le présent règlement protège les libertés et droits fondamentaux des personnes physiques.
+
+Article 4
+Définitions
+Aux fins du présent règlement, on entend par:
+1) «données à caractère personnel»: toute information se rapportant à une personne physique identifiée.
+2)
+«traitement»: toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex. toute opération effectuée sur des données, cas du numéro seul sur sa ligne comme sur EUR-Lex.
+
+CHAPITRE IV
+Responsable du traitement et sous-traitant
+
+Section 2
+Sécurité des données à caractère personnel
+
+►M1
+Article 32
+Sécurité du traitement
+◄
+1. Compte tenu de l'état des connaissances, le responsable du traitement met en œuvre les mesures techniques appropriées.
+2. Lors de l'évaluation du niveau de sécurité approprié, il est tenu compte des risques.
+
+Article 35
+Analyse d'impact relative à la protection des données
+1. Lorsqu'un type de traitement est susceptible d'engendrer un risque élevé, le responsable du traitement effectue une analyse d'impact.
+
+ANNEXE III
+Systèmes d'IA à haut risque visés à l'article 6
+1. Biométrie, dans la mesure où son utilisation est autorisée par le droit applicable.

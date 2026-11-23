@@ -1,0 +1,17 @@
+# Secrets
+.env
+
+# Environnement Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Donnees regenerables (collecte.py, decoupage.py, index.py)
+data/
+db/
+tests/decoupage/morceaux_test.jsonl
+
+# Reglages d'editeur
+.vscode/

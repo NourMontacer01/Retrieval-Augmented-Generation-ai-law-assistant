@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340" role="img" aria-label="Etude d'ablation : reussite a 5 de 68,2 % avec les vecteurs seuls a 95,5 % avec toutes les ameliorations ; BM25 fait redescendre a 90,9 %">
+  <style>
+    text { font-family: Georgia, 'Times New Roman', serif; fill: #1f1b16; }
+    .fond { fill: #f4efe4; }
+    .titre { font-size: 17px; font-weight: bold; }
+    .sous { font-size: 12px; fill: #5a5247; }
+    .libelle { font-size: 13.5px; }
+    .valeur { font-size: 13.5px; font-weight: bold; opacity: 0; animation: parait .4s ease-out forwards; }
+    .mrr { font-size: 11.5px; fill: #5a5247; opacity: 0; animation: parait .4s ease-out forwards; }
+    .barre { fill: #3b3a6b; transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: pousse 1s cubic-bezier(.2,.7,.2,1) forwards; }
+    .ecartee { fill: #b9ae9b; }
+    .grille { stroke: #d8cfbf; stroke-width: 1; }
+    .axe { font-size: 11px; fill: #5a5247; }
+    .d1 { animation-delay: .1s; } .d2 { animation-delay: .35s; } .d3 { animation-delay: .6s; }
+    .d4 { animation-delay: .85s; } .d5 { animation-delay: 1.1s; } .d6 { animation-delay: 1.35s; }
+    .v1 { animation-delay: 1.1s; } .v2 { animation-delay: 1.35s; } .v3 { animation-delay: 1.6s; }
+    .v4 { animation-delay: 1.85s; } .v5 { animation-delay: 2.1s; } .v6 { animation-delay: 2.35s; }
+    @keyframes pousse { to { transform: scaleX(1); } }
+    @keyframes parait { to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      .barre { animation: none; transform: none; }
+      .valeur, .mrr { animation: none; opacity: 1; }
+    }
+  </style>
+
+  <rect class="fond" width="900" height="340" rx="10"/>
+  <text class="titre" x="30" y="36">Réussite @5 — chaque amélioration ajoutée à la précédente</text>
+  <text class="sous" x="30" y="56">Jeu de mise au point, 22 questions avec réponse · MRR à droite</text>
+
+  <!-- axe : x = 250 pour 0 %, 1 % = 5,2 px -->
+  <line class="grille" x1="250" y1="72" x2="250" y2="302"/>
+  <line class="grille" x1="510" y1="72" x2="510" y2="302"/>
+  <line class="grille" x1="770" y1="72" x2="770" y2="302"/>
+  <text class="axe" x="250" y="320" text-anchor="middle">0 %</text>
+  <text class="axe" x="510" y="320" text-anchor="middle">50 %</text>
+  <text class="axe" x="770" y="320" text-anchor="middle">100 %</text>
+
+  <text class="libelle" x="236" y="97" text-anchor="end">Vecteurs seuls</text>
+  <rect class="barre d1" x="250" y="82" width="354.6" height="22" rx="3"/>
+  <text class="valeur v1" x="612" y="98">68,2 %</text>
+  <text class="mrr v1" x="868" y="98" text-anchor="end">0,527</text>
+
+  <text class="libelle" x="236" y="134" text-anchor="end">+ glossaire</text>
+  <rect class="barre d2" x="250" y="119" width="425.4" height="22" rx="3"/>
+  <text class="valeur v2" x="683" y="135">81,8 %</text>
+  <text class="mrr v2" x="868" y="135" text-anchor="end">0,652</text>
+
+  <text class="libelle" x="236" y="171" text-anchor="end">+ références explicites</text>
+  <rect class="barre d3" x="250" y="156" width="449.3" height="22" rx="3"/>
+  <text class="valeur v3" x="707" y="172">86,4 %</text>
+  <text class="mrr v3" x="868" y="172" text-anchor="end">0,674</text>
+
+  <text class="libelle" x="236" y="208" text-anchor="end">+ priorité aux articles</text>
+  <rect class="barre d4" x="250" y="193" width="496.6" height="22" rx="3"/>
+  <text class="valeur v4" x="754" y="209">95,5 %</text>
+  <text class="mrr v4" x="868" y="209" text-anchor="end">0,702</text>
+
+  <text class="libelle" x="236" y="245" text-anchor="end">+ diversité ✔ retenue</text>
+  <rect class="barre d5" x="250" y="230" width="496.6" height="22" rx="3"/>
+  <text class="valeur v5" x="754" y="246">95,5 %</text>
+  <text class="mrr v5" x="868" y="246" text-anchor="end">0,702</text>
+
+  <text class="libelle" x="236" y="282" text-anchor="end">+ BM25 (écarté)</text>
+  <rect class="barre ecartee d6" x="250" y="267" width="472.7" height="22" rx="3"/>
+  <text class="valeur v6" x="730" y="283">90,9 %</text>
+  <text class="mrr v6" x="868" y="283" text-anchor="end">0,693</text>
+</svg>

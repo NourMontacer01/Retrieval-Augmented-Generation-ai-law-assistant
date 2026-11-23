@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" width="900" height="330" role="img" aria-label="Chaine de traitement : question, analyse, vectorisation, recherche ChromaDB, reclassement, surlignage, redaction citee">
+  <style>
+    text { font-family: Georgia, 'Times New Roman', serif; fill: #1f1b16; }
+    .fond { fill: #f4efe4; }
+    .boite { fill: #fffdf8; stroke: #1f1b16; stroke-width: 1.2; }
+    .boite-cle { fill: #fffdf8; stroke: #8b1e2d; stroke-width: 1.8; }
+    .nom { font-size: 14px; font-weight: bold; }
+    .detail { font-size: 11.5px; fill: #5a5247; }
+    .chrono { font-size: 11px; fill: #8b1e2d; font-style: italic; }
+    .rang { font-size: 11px; letter-spacing: 2px; fill: #5a5247; }
+    .lien { fill: none; stroke: #1f1b16; stroke-width: 1.4; stroke-dasharray: 5 5; animation: flux 1.2s linear infinite; }
+    .hors-ligne { fill: none; stroke: #b9ae9b; stroke-width: 1.2; stroke-dasharray: 2 4; }
+    .boite-hl { fill: #f9f5ec; stroke: #b9ae9b; stroke-width: 1; stroke-dasharray: 4 3; }
+    .eclat { opacity: 0; animation: allume 7s infinite; }
+    .e2 { animation-delay: 1s; } .e3 { animation-delay: 2s; } .e4 { animation-delay: 3s; }
+    .e5 { animation-delay: 4s; } .e6 { animation-delay: 5s; }
+    @keyframes flux { to { stroke-dashoffset: -10; } }
+    @keyframes allume { 0%, 100% { opacity: 0; } 3%, 13% { opacity: 1; } 18% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .lien, .eclat { animation: none; } }
+  </style>
+  <defs>
+    <marker id="fleche" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f1b16"/>
+    </marker>
+  </defs>
+
+  <rect class="fond" width="900" height="330" rx="10"/>
+
+  <!-- ===== une fois : construction de la base ===== -->
+  <text class="rang" x="30" y="32">UNE FOIS — CONSTRUCTION DE LA BASE</text>
+  <rect class="boite-hl" x="30" y="44" width="180" height="56" rx="6"/>
+  <text class="nom" x="120" y="67" text-anchor="middle">📥 Collecte</text>
+  <text class="detail" x="120" y="86" text-anchor="middle">API Cellar · 4 textes</text>
+  <rect class="boite-hl" x="250" y="44" width="180" height="56" rx="6"/>
+  <text class="nom" x="340" y="67" text-anchor="middle">✂️ Découpage</text>
+  <text class="detail" x="340" y="86" text-anchor="middle">1 784 morceaux étiquetés</text>
+  <rect class="boite-hl" x="470" y="44" width="180" height="56" rx="6"/>
+  <text class="nom" x="560" y="67" text-anchor="middle">🧮 Vectorisation</text>
+  <text class="detail" x="560" y="86" text-anchor="middle">e5-base · 768 dimensions</text>
+  <rect class="boite-hl" x="690" y="44" width="180" height="56" rx="6"/>
+  <text class="nom" x="780" y="67" text-anchor="middle">🗄️ ChromaDB</text>
+  <text class="detail" x="780" y="86" text-anchor="middle">+ 5 898 phrases précalculées</text>
+  <path class="hors-ligne" d="M210,72 H250 M430,72 H470 M650,72 H690"/>
+
+  <line x1="30" y1="124" x2="870" y2="124" stroke="#d8cfbf"/>
+
+  <!-- ===== a chaque question ===== -->
+  <text class="rang" x="30" y="150">À CHAQUE QUESTION</text>
+
+  <rect class="boite" x="30" y="164" width="150" height="74" rx="6"/>
+  <rect class="eclat e1" x="30" y="164" width="150" height="74" rx="6" fill="#f6e45c" opacity="0"/>
+  <text class="nom" x="105" y="190" text-anchor="middle">❓ Question</text>
+  <text class="detail" x="105" y="208" text-anchor="middle">« piraté », « AIPD »,</text>
+  <text class="detail" x="105" y="223" text-anchor="middle">« article 22 »…</text>
+
+  <rect class="boite" x="210" y="164" width="150" height="74" rx="6"/>
+  <rect class="eclat e2" x="210" y="164" width="150" height="74" rx="6" fill="#f6e45c" opacity="0"/>
+  <text class="nom" x="285" y="190" text-anchor="middle">📖 Analyse</text>
+  <text class="detail" x="285" y="208" text-anchor="middle">glossaire juridique,</text>
+  <text class="detail" x="285" y="223" text-anchor="middle">articles et textes cités</text>
+
+  <rect class="boite" x="390" y="164" width="150" height="74" rx="6"/>
+  <rect class="eclat e3" x="390" y="164" width="150" height="74" rx="6" fill="#f6e45c" opacity="0"/>
+  <text class="nom" x="465" y="190" text-anchor="middle">🔎 Recherche</text>
+  <text class="detail" x="465" y="208" text-anchor="middle">30 candidats,</text>
+  <text class="detail" x="465" y="223" text-anchor="middle">similarité cosinus</text>
+
+  <rect class="boite" x="570" y="164" width="150" height="74" rx="6"/>
+  <rect class="eclat e4" x="570" y="164" width="150" height="74" rx="6" fill="#f6e45c" opacity="0"/>
+  <text class="nom" x="645" y="190" text-anchor="middle">⚖️ Reclassement</text>
+  <text class="detail" x="645" y="208" text-anchor="middle">articles avant considérants,</text>
+  <text class="detail" x="645" y="223" text-anchor="middle">2 morceaux max / article</text>
+
+  <rect class="boite-cle" x="750" y="164" width="120" height="74" rx="6"/>
+  <rect class="eclat e5" x="750" y="164" width="120" height="74" rx="6" fill="#f6e45c" opacity="0"/>
+  <text class="nom" x="810" y="190" text-anchor="middle">🖍️ Surlignage</text>
+  <text class="detail" x="810" y="208" text-anchor="middle">phrase la plus</text>
+  <text class="detail" x="810" y="223" text-anchor="middle">proche · 2 ms</text>
+
+  <path class="lien" d="M180,201 H208" marker-end="url(#fleche)"/>
+  <path class="lien" d="M360,201 H388" marker-end="url(#fleche)"/>
+  <path class="lien" d="M540,201 H568" marker-end="url(#fleche)"/>
+  <path class="lien" d="M720,201 H748" marker-end="url(#fleche)"/>
+  <path class="lien" d="M810,238 V262 H700" marker-end="url(#fleche)"/>
+
+  <rect class="boite-cle" x="390" y="252" width="310" height="58" rx="6"/>
+  <rect class="eclat e6" x="390" y="252" width="310" height="58" rx="6" fill="#f6e45c" opacity="0"/>
+  <text class="nom" x="545" y="275" text-anchor="middle">✍️ Réponse citée [1] [2] — Mistral</text>
+  <text class="detail" x="545" y="294" text-anchor="middle">uniquement à partir des passages · en streaming</text>
+
+  <text class="chrono" x="465" y="156" text-anchor="middle">92 ms</text>
+  <text class="detail" x="30" y="290">Le serveur ne fait jamais attendre la rédaction</text>
+  <text class="detail" x="30" y="306">pour afficher les passages.</text>
+</svg>
