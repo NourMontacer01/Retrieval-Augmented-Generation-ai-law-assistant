@@ -173,8 +173,8 @@ function afficher(donnees) {
   if (donnees.redaction) {
     $("texte-synthese").innerHTML = "";
   } else {
-    $("texte-synthese").innerHTML =
-      "<p><em>Aucune clé d'API n'est configurée : pas de synthèse, seulement les passages les plus proches de la question.</em></p>";
+    $("texte-synthese").innerHTML = `<p><em>${echapper(donnees.message ||
+      "Aucune clé d'API n'est configurée : pas de synthèse, seulement les passages les plus proches de la question.")}</em></p>`;
     $("fournisseur").textContent = "";
   }
 

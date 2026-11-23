@@ -16,11 +16,16 @@ RGPD · AI Act · directive ePrivacy · Data Act
 
 *Chaque réponse cite l'article exact **et** dit si la source oblige ou recommande.*
 
+### [🌐 Essayer en ligne](https://nourmonta01-recueil-de-conformite.static.hf.space)
+
+<sub>Aucune installation : la recherche tourne dans votre navigateur (première visite : environ 300 Mo à charger).</sub>
+
 [🎯 Utilité](#-à-quoi-ça-sert) ·
 [🖼️ Aperçu](#️-aperçu) ·
 [🏗️ Architecture](#️-architecture) ·
 [📚 Ressources](#-ressources-utilisées) ·
 [📊 Résultats](#-mesures-et-performances) ·
+[🌐 En ligne](#-version-en-ligne) ·
 [🚀 Lancer](#-lancer-le-projet)
 
 </div>
@@ -252,6 +257,37 @@ rédaction.
 
 ---
 
+## 🌐 Version en ligne
+
+👉 **[nourmonta01-recueil-de-conformite.static.hf.space](https://nourmonta01-recueil-de-conformite.static.hf.space)**
+
+L'hébergement d'un serveur Python avec un modèle de langue est payant ; la version en ligne
+n'a donc **pas de serveur**. Le navigateur du visiteur charge le même modèle
+(`multilingual-e5-base`, au format ONNX via transformers.js) et compare la question aux
+vecteurs déjà calculés, exportés depuis ChromaDB. La logique de recherche
+(`hebergement/moteur.js`) est une traduction fidèle de `recherche.py` : glossaire,
+références explicites, priorité aux articles, diversité, surlignage.
+
+| | Version locale | Version en ligne |
+|---|---|---|
+| Modèle | PyTorch, 32 bits | ONNX quantifié 8 bits (296 Mo) |
+| Réussite @5 (mise au point) | 95,5 % | 86,4 % |
+| MRR | 0,702 | 0,683 |
+| Recherche | 92 ms | ~250 ms, dans le navigateur |
+| Synthèse rédigée | ✅ (clé Mistral) | ❌ (une clé d'API ne peut pas être exposée dans une page publique) |
+
+**Compromis mesuré.** La quantification 8 bits fait perdre deux questions limites (déjà
+classées 3ᵉ et 5ᵉ en local). Avec le modèle en 16 bits, la version en ligne retrouve
+exactement 95,5 % et 0,702, mais le premier chargement double (555 Mo) : pour une démo, j'ai
+privilégié le temps d'accès.
+
+```
+.venv\Scripts\python -m hebergement.exporter   # construit hebergement/site/ depuis la base
+.venv\Scripts\python -m hebergement.publier    # publie sur Hugging Face Spaces (statique, gratuit)
+```
+
+---
+
 ## 🚀 Lancer le projet
 
 **Sous Windows**, avec Python 3.11 ou plus récent : double-cliquer sur **`lancer.bat`**.
@@ -363,6 +399,7 @@ rag-conformite/
 │   ├── decoupage/       échantillons pour tester le découpage
 │   └── questions/       jeux de questions d'évaluation
 ├── notebooks/           démonstration
+├── hebergement/         version en ligne : moteur JavaScript, export, publication
 ├── docs/assets/         illustrations du README
 └── lancer.bat           lancement en un double-clic
 ```

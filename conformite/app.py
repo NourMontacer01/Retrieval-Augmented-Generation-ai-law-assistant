@@ -4,6 +4,7 @@ Usage (dossier du projet, terminal PowerShell) :
     .venv\\Scripts\\python -m conformite.app
 puis ouvrir http://127.0.0.1:8000
 """
+import os
 import re
 import sys
 import time
@@ -157,4 +158,6 @@ def unite(source_id: str, type_unite: str, numero: str):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="127.0.0.1", port=PORT, log_level="warning")
+    # En local : 127.0.0.1:8000. Sur un hebergeur (Docker) : HOTE=0.0.0.0 et PORT fournis
+    uvicorn.run(app, host=os.getenv("HOTE", "127.0.0.1"), port=int(os.getenv("PORT", PORT)),
+                log_level="warning")

@@ -19,3 +19,6 @@ tests/decoupage/morceaux_test.jsonl
 # Rapport du projet : garde en local, non publie
 docs/rapport.pdf
 docs/rapport/
+
+# Site en ligne genere par hebergement/exporter.py
+hebergement/site/
