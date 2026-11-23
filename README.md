@@ -21,7 +21,6 @@ RGPD · AI Act · directive ePrivacy · Data Act
 [🏗️ Architecture](#️-architecture) ·
 [📚 Ressources](#-ressources-utilisées) ·
 [📊 Résultats](#-mesures-et-performances) ·
-[📄 Rapport](#-rapport-complet) ·
 [🚀 Lancer](#-lancer-le-projet)
 
 </div>
@@ -253,20 +252,6 @@ rédaction.
 
 ---
 
-## 📄 Rapport complet
-
-<div align="center">
-
-### [📥 Lire le rapport PDF (13 pages)](docs/rapport.pdf)
-
-</div>
-
-Architecture, démarche étape par étape, métriques et formules, résultats chiffrés, les neuf
-problèmes rencontrés et leur solution, limites et perspectives, détail des 24 questions
-d'évaluation.
-
----
-
 ## 🚀 Lancer le projet
 
 **Sous Windows**, avec Python 3.11 ou plus récent : double-cliquer sur **`lancer.bat`**.
@@ -378,7 +363,7 @@ rag-conformite/
 │   ├── decoupage/       échantillons pour tester le découpage
 │   └── questions/       jeux de questions d'évaluation
 ├── notebooks/           démonstration
-├── docs/                rapport PDF et illustrations
+├── docs/assets/         illustrations du README
 └── lancer.bat           lancement en un double-clic
 ```
 

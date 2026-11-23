@@ -15,3 +15,7 @@ tests/decoupage/morceaux_test.jsonl
 
 # Reglages d'editeur
 .vscode/
+
+# Rapport du projet : garde en local, non publie
+docs/rapport.pdf
+docs/rapport/
